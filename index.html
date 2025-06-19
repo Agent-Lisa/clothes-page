@@ -1,0 +1,93 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clothes page</title>
+    <style>
+        body {
+            font-family: arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 2em;
+        }
+        .clothing-item {
+            margin: 1em;
+            padding: 1em;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: calc(33.33% - 2em);
+        }
+        .clothing-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+        .clothing-item h2 {
+            margin-top: 0;
+        }
+        .clothing-item p {
+            margin-bottom: 1em;
+        }
+        .clothing-item button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 0.5em 1em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .clothing-item button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>clothes page</h1>
+    </header>
+    <main>
+        <div class="clothing-item">
+            <img src="tshirt.jpg" alt="t-shirt">
+            <h2>t-shirt</h2>
+            <p>$19.99</p>
+            <button>buy now</button>
+        </div>
+        <div class="clothing-item">
+            <img src="jeans.jpg" alt="jeans">
+            <h2>jeans</h2>
+            <p>$29.99</p>
+            <button>buy now</button>
+        </div>
+        <div class="clothing-item">
+            <img src="jacket.jpg" alt="jacket">
+            <h2>jacket</h2>
+            <p>$39.99</p>
+            <button>buy now</button>
+        </div>
+    </main>
+    <script>
+        // add event listener to buttons
+        const buttons = document.queryselectorall('.clothing-item button');
+        buttons.foreach(button => {
+            button.addeventlistener('click', () => {
+                alert('thank you for your purchase!');
+            });
+        });
+    </script>
+</body>
+</html>
